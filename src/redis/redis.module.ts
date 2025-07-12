@@ -7,7 +7,7 @@ import Redis from "ioredis";
       provide: "REDIS_CLIENT",
       useFactory: async () => {
         const client = new Redis({
-          host: process.env.REDIS_HOST || "http://srv-captain--redis",
+          host: process.env.REDIS_HOST || "srv-captain--redis",
           port: parseInt(process.env.REDIS_PORT || "6379"),
         });
 
